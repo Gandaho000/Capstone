@@ -1,0 +1,23 @@
+   .reveal-if-active {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+}
+    .reveal-if-active > button {
+    opacity: 1;
+    max-height: 100px;
+    overflow: visible;
+    }
+
+input[type="radio"]:checked ~ .reveal-if-active,
+input[type="checkbox"]:checked ~ .reveal-if-active {
+  opacity: 1 ;
+  max-height: 100px; /* little bit of a magic number :( */
+  overflow: visible;
+}
+
+input[type="checkbox"]:checked ~ #shithappens{
+  opacity: 0 !important;
+  max-height: 0 !important;
+  overflow: hidden !important;
+}
