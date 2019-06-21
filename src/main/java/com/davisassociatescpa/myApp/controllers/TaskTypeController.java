@@ -25,6 +25,7 @@ public class TaskTypeController {
     public String addTask(Model model) {
         model.addAttribute("title", "Add Task");
         model.addAttribute(new TaskType());
+        model.addAttribute("tasktypes", taskTypeDao.findAll());
         return "tasks/tasktype.html";
     }
 

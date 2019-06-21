@@ -12,6 +12,12 @@
         <button type="submit" class="btn btn-primary">Submit</button>
     </div>
 
+    <ul>
+        <li th:each="task : ${tasktypes}">
+            <a th:href="www.digitalera360.com" th:text="${task.taskTypeName}"></a>
+        </li>
+    </ul>
+
 </form>
 
 <div th:replace="fragments :: bootstrap"></div>
