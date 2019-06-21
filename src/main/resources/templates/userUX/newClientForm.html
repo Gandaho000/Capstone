@@ -36,6 +36,7 @@ input[type="checkbox"]:checked ~ #shithappens{
 <div class="form-group col-md-4">
     <label for="filingStatus">Filing Status</label>
     <select id="filingStatus" name="filingStatus" class="form-control" th:field="*{filingStatus}">
+        <option value=""> -- select an state -- </option>
         <option value="Single">Single</option>
         <option value="Married Filing Jointly">Married Filing Jointly</option>
         <option value="Married Filing Separately">Married Filing Separately</option>
@@ -46,12 +47,12 @@ input[type="checkbox"]:checked ~ #shithappens{
     <div class="form-row">
         <div class="form-group col-md-6">
             <label for="firstname1">Tax Payer's First Name </label>
-            <input type="text" class="form-control" id="firstName1" name="firstName1" th:field="*{firstName1}" placeholder="Tax Payer First Name">
+            <input type="text" class="form-control" id="firstName1" name="firstName1" th:field="*{firstName1}">
             <span th:errors="*{firstName1}" class="error"></span>
         </div>
         <div class="form-group col-md-6">
             <label for="lastname1">Tax Payer's Last Name</label>
-            <input type="text" class="form-control" id="lastName1" name="lastName1" th:field="*{lastName1}" placeholder="Tax Payer Last Name">
+            <input type="text" class="form-control" id="lastName1" name="lastName1" th:field="*{lastName1}">
             <span th:errors="*{lastName1}" class="error"></span>
         </div>
     </div>
@@ -59,11 +60,11 @@ input[type="checkbox"]:checked ~ #shithappens{
     <div class="form-row">
         <div class="form-group col-md-6">
             <label for="firstname2">Spouse's First Name</label>
-            <input type="text" class="form-control" id="firstname2" th:field="*{firstName2}" placeholder="Tax Payer 2 First Name">
+            <input type="text" class="form-control" id="firstname2" th:field="*{firstName2}">
         </div>
         <div class="form-group col-md-6">
             <label for="lastname2">Spouse's Last Name</label>
-            <input type="text" class="form-control" id="lastname2" th:field="*{lastName2}" placeholder="Tax Payer 2 Last Name">
+            <input type="text" class="form-control" id="lastname2" th:field="*{lastName2}">
         </div>
     </div>
 
@@ -71,43 +72,43 @@ input[type="checkbox"]:checked ~ #shithappens{
     <div class="form-row">
         <div class="form-group col-md-6">
             <label for="clientEmail1">Tax Payer's Email Address</label>
-            <input type="email" class="form-control" id="clientEmail1" name="clientEmail1" placeholder="abc@abc.com" th:field="*{clientEmail1}">
+            <input type="email" class="form-control" id="clientEmail1" name="clientEmail1" th:field="*{clientEmail1}">
             <span th:errors="*{clientEmail1}" class="error"></span>
         </div>
         <div class="form-group col-md-6">
             <label for="clientEmail2">Spouse's Email Address</label>
-            <input type="email" class="form-control" id="clientEmail2" name="clientEmail2" placeholder="Tax Payer 2 Last Name" th:field="*{clientEmail2}">
+            <input type="email" class="form-control" id="clientEmail2" name="clientEmail2" th:field="*{clientEmail2}">
         </div>
     </div>
 
     <div class="form-row">
         <div class="form-group col-md-6">
             <label for="dob1">Tax Payer's Date Of Birth</label>
-            <input type="text" class="form-control" id="dob1" name="dob1" placeholder="11/27/1990" th:field="*{dob1}">
+            <input type="text" class="form-control" id="dob1" name="dob1" th:field="*{dob1}">
             <span th:errors="*{dob1}" class="error"></span>
         </div>
         <div class="form-group col-md-6">
             <label for="clientEmail2">Spouse's Date Of Birth</label>
-            <input type="text" class="form-control" id="dob2" name="dob2" placeholder="11/27/1990" th:field="*{dob2}">
+            <input type="text" class="form-control" id="dob2" name="dob2" th:field="*{dob2}">
         </div>
     </div>
 
     <div class="form-row">
         <div class="form-group col-md-6">
             <label for="clientPhone1">Phone Number 1</label>
-            <input type="text" class="form-control" id="clientPhone1" name="clientPhone1" placeholder="314-653-0008" th:field="*{clientPhone1}">
+            <input type="text" class="form-control" id="clientPhone1" name="clientPhone1" th:field="*{clientPhone1}">
             <span th:errors="*{clientPhone1}" class="error"></span>
         </div>
         <div class="form-group col-md-6">
             <label for="clientPhone2">Phone Number 2</label>
-            <input type="text" class="form-control" id="clientPhone2" name="clientPhone2" placeholder="314-653-0008" th:field="*{clientPhone2}">
+            <input type="text" class="form-control" id="clientPhone2" name="clientPhone2" th:field="*{clientPhone2}">
         </div>
     </div>
 
 
     <div class="form-group">
         <label for="clientAddress1">Address</label>
-        <input type="text" class="form-control" id="clientAddress1" name="clientAddress1" placeholder="1234 Main St" th:field="*{clientAddress1}">
+        <input type="text" class="form-control" id="clientAddress1" name="clientAddress1" th:field="*{clientAddress1}">
         <span th:errors="*{clientAddress1}" class="error"></span>
     </div>
 
@@ -120,6 +121,7 @@ input[type="checkbox"]:checked ~ #shithappens{
         <div class="form-group col-md-4">
             <lacbel for="clientState1">State</lacbel>
             <select id="clientState1" name="clientState1" class="form-control" th:field="*{clientState1}">
+                    <option value=""> -- select an state -- </option>
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
                     <option value="AZ">Arizona</option>
@@ -177,6 +179,7 @@ input[type="checkbox"]:checked ~ #shithappens{
         <div class="form-group col-md-2">
             <label for="clientzip1">Zip</label>
             <input type="text" class="form-control" id="clientZip1" name="clientZip1" th:field="*{clientZip1}">
+            <span th:errors="*{clientZip1}" class="error"></span>
         </div>
     </div>
 
@@ -194,12 +197,12 @@ input[type="checkbox"]:checked ~ #shithappens{
 
         <div class="form-group">
             <label for="clientBusinessName">Business Name</label>
-            <input type="text" class="form-control" id="clientBusinessName" name="clientBusinessName" th:field="*{clientBusinessName}" placeholder="ABC Corp.">
+            <input type="text" class="form-control" id="clientBusinessName" name="clientBusinessName" th:field="*{clientBusinessName}">
         </div>
 
         <div class="form-group">
             <label for="clientBusinessAddress1">Business Address</label>
-            <input type="text" class="form-control" id="clientBusinessAddress1" name="clientBusinessAddress1" th:field="*{clientBusinessAddress1}" placeholder="1234 Main St">
+            <input type="text" class="form-control" id="clientBusinessAddress1" name="clientBusinessAddress1" th:field="*{clientBusinessAddress1}">
         </div>
 
         <div class="form-row">
@@ -210,6 +213,7 @@ input[type="checkbox"]:checked ~ #shithappens{
             <div class="form-group col-md-4">
                 <label for="clientBusinessState1">State</label>
                 <select id="clientBusinessState1" name="clientBusinessState1" class="form-control" th:field="*{clientBusinessState1}">
+                    <option value=""> -- select an state -- </option>
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
                     <option value="AZ">Arizona</option>
@@ -276,6 +280,7 @@ input[type="checkbox"]:checked ~ #shithappens{
             <div class="form-group col-md-4">
                 <label for="clientBusinessFilingType">Business Entity Type</label>
                 <select id="clientBusinessFilingType" name="clientBusinessFilingType" class="form-control" th:field="*{clientBusinessFilingType}">
+                <option value="?."> -- Select An Option -- </option>
                 <option value="Sole Proprietorship">LLC</option>
                 <option value="Limited liability company">Limited Liability Company</option>
                 <option value="C-Corporation">C-Corporation</option>

@@ -2,6 +2,14 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head th:replace="fragments :: head"></head>
 <body>
+<h1 th:text="${title}">Default Title</h1>
+
+<form method="post" th:object="${tasktype}">
+
+
+
+
+</form>
 
 <div th:replace="fragments :: bootstrap"></div>
 </body>

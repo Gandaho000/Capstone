@@ -14,7 +14,7 @@ import javax.validation.Valid;
 
 @Controller
 @RequestMapping(value = "admin")
-public class AppController {
+public class ClientController {
 
     @Autowired
     private ClientDao clientDao;

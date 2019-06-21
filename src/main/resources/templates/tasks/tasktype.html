@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body>
+<h1 th:text="${title}">Default Title</h1>
+
+<form method="post" th:object="${newTaskType}">
+
+    <div class="form-group">
+        <label for="exampleFormControlInput1">New Task Type</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" th:field="*{taskTypeName}">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+
+</form>
+
+<div th:replace="fragments :: bootstrap"></div>
+</body>
+</html>

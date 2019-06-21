@@ -13,7 +13,6 @@ public class Client {
     @GeneratedValue
     private int id;
 
-
     private String filingStatus;
 
 
@@ -21,6 +20,7 @@ public class Client {
 
 
     private String lastName1;
+
 
     private String dob1;
 
@@ -42,9 +42,11 @@ public class Client {
 
     private String clientZip1;
 
+
     private String clientEmail1;
 
     private String clientEmail2;
+
 
     private String clientPhone1;
 
@@ -63,7 +65,7 @@ public class Client {
 
     private String clientBusinessName;
 
-    private Integer clientBusinessEstYear;
+    private String clientBusinessEstYear;
 
     private String clientBusinessFilingType;
 
@@ -99,7 +101,7 @@ public class Client {
                   String connect1,
                   Boolean businessOwner,
                   String clientBusinessName,
-                  Integer clientBusinessEstYear,
+                  String clientBusinessEstYear,
                   String clientBusinessFilingType,
                   String clientBusinessAddress1,
                   String clientBusinessCity1,
@@ -317,11 +319,11 @@ public class Client {
         this.clientBusinessName = clientBusinessName;
     }
 
-    public Integer getClientBusinessEstYear() {
+    public String getClientBusinessEstYear() {
         return clientBusinessEstYear;
     }
 
-    public void setClientBusinessEstYear(Integer clientBusinessEstYear) {
+    public void setClientBusinessEstYear(String clientBusinessEstYear) {
         this.clientBusinessEstYear = clientBusinessEstYear;
     }
 
