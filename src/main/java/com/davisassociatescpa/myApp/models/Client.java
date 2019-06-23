@@ -9,6 +9,7 @@ import javax.validation.constraints.Size;
 @Entity
 public class Client {
 
+
     @Id
     @GeneratedValue
     private int id;

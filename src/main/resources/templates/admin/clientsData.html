@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body>
+
+<ul>
+    <li th:each="client : ${clients}">
+        <a th:href="@{'/admin/clients/clientID?clientID=' + ${client.id}}" th:text="*{client.firstName1}"></a>
+    </li>
+</ul>
+
+<div th:replace="fragments :: bootstrap"></div>
+</body>
+</html>
